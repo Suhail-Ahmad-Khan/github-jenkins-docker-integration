@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("getintodevops/hellonode")
+        app = docker.build("khansuhl/github-jenkins-docker-integration")
     }
 
     stage('Test image') {
@@ -28,7 +28,7 @@ node {
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('https://hub.docker.com', 'suhailkhan123') {
+        docker.withRegistry('https://registry.hub.docker.com', 'suhailkhan123') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
