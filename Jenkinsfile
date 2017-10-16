@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build"khansuhl/github-jenkins-docker-integration"
+        app = docker.build("github-jenkins-docker-integration")
     }
 
     stage('Test image') {
