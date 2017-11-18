@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("getintodevops/hellonode")
+        app = docker.build("suhailkhan123/hellonode")
     }
 
     stage('Test image') {
@@ -31,7 +31,7 @@ node {
        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
         } */
 
-    app.push("suhailkhan123/${env.BUILD_NUMBER}")
+    app.push("${env.BUILD_NUMBER}")
     app.push("latest")
 
     }
