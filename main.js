@@ -9,4 +9,4 @@ var server = http.createServer(function (request, response) {
 
 // listen on localhost:8000
 server.listen(8000);
-console.log("Server listening at http://52.32.25.62:8000/");
+console.log("Server listening at http://ec2-34-210-123-117.us-west-2.compute.amazonaws.com:8000/");
